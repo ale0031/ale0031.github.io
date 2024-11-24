@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=ç, initial-scale=1.0">
+    <title>TerraMin | Contactos </title>
+    <link rel="icon" href="images/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <!-- Instalacion de bootraps 5.3 -->
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Instalacion de CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCj5s4V_Y5FInxNCMbjfM2OpdRGmDZN_x4"></script>
+</head>
+<body class="contacto">
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-dark justify-content-between">
+            <a href="index.html" class="navbar-brand">
+            <img src="images/logo.png" 
+            alt="We share"  
+            loading="lazy" 
+            class="navbar-brand__img">
+            TERRAMIN 
+            </a>
+            <button 
+            class="navbar-toggler me-3"
+            type="button"
+            data-bs-toggle="collapse" 
+            data-bs-target="#contenido-nav" 
+            aria-controls="contenido-nav" 
+            aria-expanded="false"
+            aria-label="Toggle navegation"
+            >
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse ms-auto" id="contenido-nav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link nav-link-custom"><i class="fas fa-home"></i> Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link nav-link-custom"><i class="fas fa-info-circle"></i> Nosotros</a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a href="sustentabilidad.html" class="nav-link nav-link-custom"><i class="fas fa-leaf"></i> Sustentabilidad</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="rrhh.html" class="nav-link nav-link-custom"><i class="fas fa-briefcase"></i> Trabaja con nosotros</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="contacts.html" class="nav-link nav-link-custom"><i class="fas fa-envelope"></i> Contactos</a>
+                    </li>
+           
+                </ul>
+
+
+        <!--Iconos de redes sociales-->
+                <ul class="navbar-nav d-flex flex-row align-items-center me-3 ml-auto">
+                    <li class="nav-item">
+                        <a href="https://www.facebook.com" target="_blank" class="nav-link"><i class="fab fa-facebook-f"></i></a>
+                    </li>
+            
+                    <li class="nav-item">
+                        <a href="https://www.instagram.com" target="_blank" class="nav-link"><i class="fab fa-instagram"></i></a>
+                    </li>
+            
+                    <li class="nav-item">
+                        <a href="https://www.twitter.com" target="_blank" class="nav-link"><i class="fab fa-twitter"></i></a>
+                    </li>
+                </ul>
+
+
+            </div>
+        </nav>
+    </div>
+
+     <!-- Carrosel -->
+     <div id="human-resources-carousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/Diseño sin título (11).png" class="d-block w-100  h-md-50 h-lg-75 img-fluid" alt="Imagen 1">
+                <div class="carousel-caption carousel-caption-custom-rrhh">
+                   <h2 class="big-text">CONTACTO</h2>
+                   <span class="small-text">Estamos para saber de vos, escribinos.</span>
+                </div>
+            </div>
+            <!-- Puedes añadir más items del carrusel aquí -->
+        </div>
+        
+    </div>
+
+
+    <div class="container mt-5">
+        <div class="row">
+          <div class="col-md-6">
+            <h2 class="faja mb-0">Escribinos un mensaje</h2>
+            <form id="formulario-contacto" class="needs-validation" novalidate>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="nombre">Nombre:</label>
+                  <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre" required>
+                  <div class="invalid-feedback">Por favor, ingrese su nombre.</div>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="apellido">Apellido:</label>
+                  <input type="text" class="form-control" id="apellido" placeholder="Ingrese su apellido" required>
+                  <div class="invalid-feedback">Por favor, ingrese su apellido.</div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="email">Correo electrónico:</label>
+                <input type="email" class="form-control" id="email" placeholder="Ingrese su correo electrónico" required>
+                <div class="invalid-feedback">Por favor, ingrese un correo electrónico válido.</div>
+              </div>
+              <div class="form-group">
+                <label for="mensaje">Mensaje:</label>
+                <textarea class="form-control" id="mensaje" rows="3" required></textarea>
+                <div class="invalid-feedback">Por favor, ingrese un mensaje.</div>
+              </div>
+              <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+          </div>
+          <div class="col-md-6">
+            <h2 class="faja mb-0">UBICACIÓN</h2>
+            <div id="mapa" style="width: 100%; height: 510px;"></div>
+          </div>
+        </div>
+      </div>
+
+<!-- Foooter -->
+
+<footer class="bg-dark text-white pt-4">
+    <div class="container">
+        <div class="row">
+            <!-- Sección de Información -->
+            <div class="col-md-4">
+                <h5 class="footer-titulo">Sobre Nosotros</h5>
+                <p class="footer">Terramin es una empresa dedicada a brindar soluciones sostenibles e innovadoras en el sector minero.</p>
+            </div>
+            <!-- Sección de Enlaces -->
+            <div class="col-md-4">
+                <h5>Enlaces Rápidos</h5>
+                <ul class="list-unstyled">
+                    <li><a href="index.html" class="text-white">Inicio</a></li>
+                    <li><a href="about.html" class="text-white">Nosotros</a></li>
+                    <li><a href="sustentabilidad.html" class="text-white">Sustentabilidad</a></li>
+                    <li><a href="contacts.html" class="text-white">Contactos</a></li>
+                </ul>
+            </div>
+            <!-- Sección de Redes Sociales -->
+            <div class="col-md-4">
+                <h5>Conéctate con Nosotros</h5>
+                <ul class="list-unstyled d-flex">
+                    <li><a href="https://www.facebook.com" target="_blank" class="text-white me-3"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://www.instagram.com" target="_blank" class="text-white me-3"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://www.twitter.com" target="_blank" class="text-white"><i class="fab fa-twitter"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Línea divisoria -->
+        <hr class="my-4">
+        <!-- Sección de Derechos Reservados -->
+        <div class="row">
+            <div class="col text-center">
+                <p class="mb-0 footer">&copy; 2024 Terramin. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCj5s4V_Y5FInxNCMbjfM2OpdRGmDZN_x4&loading=async&callback=initMap&libraries=map,marker"></script>
+  <gmp-map center="-31.5582339,-68.5167133" zoom="4" map-id="DEMO_MAP_ID"style="height: 400px">
+  <gmp-advanced-marker position="37.4220656,-122.0840897" title="Mountain View, CA"></gmp-advanced-marker>
+  <gmp-advanced-marker position="47.648994,-122.3503845" title="Seattle, WA"></gmp-advanced-marker>
+</gmp-map>    
+    <!--Inclusion de Javascript con Bootraps-->
+
+    <script src="script.js"></script>    
+</body>
+</html>
